@@ -73,14 +73,16 @@ function draw() {
  // text("Food Remaining="+foodS,width/2+50,height/2-50);
 
  if(gameState!="Hungry"){
-   feedDog1.hide();
-   addfood.hide();
-   dog.remove();
+  feedDog1.hide();
+  addfood.hide();
+  dog.visible= false;
+  
+
  }
-if(gameState==="Hungry"){
+else{
   feedDog1.show();
   addfood.show();
-  dog.addImage(dogImg);
+  dog.visible= true;
 }
 
 var currentTime= hour();
